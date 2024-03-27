@@ -5,6 +5,7 @@ export const ItemListContainer = ({ greeting }) => {
         textAlign: "center",
         textTransform: "uppercase",
         marginTop: "30px",
+        color: "#000152",
       }}
     >
       <h3>{greeting}</h3>
