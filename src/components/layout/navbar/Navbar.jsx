@@ -6,42 +6,59 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { CartWidget } from "../../common/cartWidget/CartWidget";
-
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 export const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            MC
+            <Link to="/">MC</Link>
           </Typography>
 
-          <ul style={{ listStyle: "none", display: "flex", padding: "5px" }}>
-            <li
+          <ul style={{ LinkstStyle: "none", display: "flex", padding: "5px" }}>
+            <Link style={{ padding: "5px", cursor: "pointer" }} to="/">
+              Todas las categorías
+            </Link>
+            <Link
               style={{ padding: "5px", cursor: "pointer" }}
-              onClick={() => {
-                alert("Soy clickeable");
-              }}
+              to="/category/instrumentos-de-cuerda"
             >
-              Productos
-            </li>
-            <li
+              Cuerdas
+            </Link>
+            <Link
               style={{ padding: "5px", cursor: "pointer" }}
-              onClick={() => {
-                alert("Soy clickeable");
-              }}
+              to="/category/instrumentos-de-teclado"
             >
-              Blog
-            </li>
-            <li
+              Teclados
+            </Link>
+            <Link
               style={{ padding: "5px", cursor: "pointer" }}
-              onClick={() => {
-                alert("Soy clickeable");
-              }}
+              to="/category/instrumentos-de-percusion"
             >
-              Login
-            </li>
+              Percusión
+            </Link>
+            <Link
+              style={{ padding: "5px", cursor: "pointer" }}
+              to="/category/instrumentos-de-viento"
+            >
+              Instrumentos de viento
+            </Link>
+            <Link
+              style={{ padding: "5px", cursor: "pointer" }}
+              to="/category/amplificadores"
+            >
+              Amplificadores
+            </Link>
+            <Link
+              style={{ padding: "5px", cursor: "pointer" }}
+              to="/category/accesorios-de-audio"
+            >
+              Accesorios
+            </Link>
           </ul>
+
           <CartWidget />
         </Toolbar>
       </AppBar>
